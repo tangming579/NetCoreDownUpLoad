@@ -44,7 +44,7 @@ namespace NetCoreLoadFilesSample
             }
 
             app.UseStaticFiles();
-            var staticFilePath = Path.Combine(Directory.GetCurrentDirectory(), @"Files");
+            var staticFilePath = Path.Combine(Directory.GetCurrentDirectory(), @"StaticFiles");
             if (!Directory.Exists(staticFilePath))
                 Directory.CreateDirectory(staticFilePath);
             app.UseStaticFiles(new StaticFileOptions()

@@ -35,7 +35,7 @@ namespace NetCoreLoadFilesSample.Controllers
                                 .Parse(file.ContentDisposition)
                                 .FileName
                                 .Trim('"');
-                fileName = Path.Combine(Directory.GetCurrentDirectory(), $@"Files\{fileName}");
+                fileName = Path.Combine(Directory.GetCurrentDirectory(), $@"StaticFiles\{fileName}");
                 size += file.Length;
                 using (FileStream fs = System.IO.File.Create(fileName))
                 {
@@ -57,7 +57,7 @@ namespace NetCoreLoadFilesSample.Controllers
                                 .Parse(file.ContentDisposition)
                                 .FileName
                                 .Trim('"');
-                filename = Path.Combine(Directory.GetCurrentDirectory(), $@"Files\{filename}");
+                filename = Path.Combine(Directory.GetCurrentDirectory(), $@"StaticFiles\{filename}");
                 size += file.Length;
                 using (FileStream fs = System.IO.File.Create(filename))
                 {
